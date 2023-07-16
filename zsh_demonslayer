@@ -1,0 +1,27 @@
+alias x='xargs'
+alias v='nvim'
+alias c='cat'
+alias e='echo'
+alias l='less --IGNORE-CASE'
+alias g='grep -i'
+alias p='python3'
+alias b='base64 -d'
+alias j='jwt decode - '
+alias r='source ranger'
+
+function rmrf() {
+  if [[ "$1" ]]; then
+    find "$1" -name . -o -prune -exec rm -rf -- {} +
+  else
+    echo 'Define path!'
+  fi
+}
+
+# Exit in last ranger dir
+alias ranger='source ranger'
+# Stop ranger from loading both the default rc.conf
+export RANGER_LOAD_DEFAULT_RC='false'
+# indicator can be added to your shell's prompt to show when running in a shell spawned by ranger
+if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
+
+alias jwt='jwt decode'
