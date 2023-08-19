@@ -8,6 +8,9 @@ alias p='python3'
 alias b='base64 -d'
 alias j='jwt decode - '
 alias r='source ranger'
+alias malorian='docker run -it --rm --network=host -v ~/hack:/root/hack --entrypoint zsh malorian'
+alias redryder='docker run -it --rm -v ~/hack:/root/hack -v /etc/hosts:/etc/hosts -v /tmp/.X11-unix:/tmp/.X11-unix --network host redryder zsh'
+alias pacmanupgrade='pacman -Sy archlinux-keyring && pacman -Su'
 
 function rmrf() {
   if [[ "$1" ]]; then
@@ -25,3 +28,7 @@ export RANGER_LOAD_DEFAULT_RC='false'
 if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
 
 alias jwt='jwt decode'
+
+function unjson() {
+  echo; echo "$1" | sed 's/\\//g'
+}
