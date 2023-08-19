@@ -33,4 +33,4 @@ source $HOME/.zshrc_aliases
 source $HOME/.zshrc_extra 2>/dev/null
 source $HOME/.zshrc_k8s 2>/dev/null
 source $HOME/os/roles/zsh/files/zsh_demonslayer 2>/dev/null
-
+source $HOME/.zsh_demonslayer 2>/dev/null
