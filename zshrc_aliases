@@ -81,7 +81,7 @@ export TERM='xterm-256color'
 export PATH="$PATH:$HOME/.local/bin" # python3 pip packages
 export PATH="$PATH:$HOME/go/bin/" # go packages
 export PATH="$PATH:$HOME/.cargo/bin" # rust (cargo) packages
-export PATH="$PATH:$HOME/.scripts" # my tools
+export PATH="$PATH:$HOME/scripts" # my tools
 # export DISABLE_LS_COLORS='true' # Need this so on-my-zsh will not override my ls alias
 
 #functions
